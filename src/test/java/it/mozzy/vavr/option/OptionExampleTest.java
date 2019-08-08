@@ -1,11 +1,14 @@
 package it.mozzy.vavr.option;
 
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
+import java.util.Optional;
+
 import org.junit.Before;
 import org.junit.Test;
+
+import io.vavr.control.Option;
 
 public class OptionExampleTest {
 
@@ -36,4 +39,13 @@ public class OptionExampleTest {
 		assertNull(this.examples.vavrNullCheck(null));
 	}
 
+	@Test
+	public void typicalUse() {
+		// Option without anything inside
+		Option.none();
+		Option<String> dogMaybe = Option.of("dog");
+		Optional<String> javaOptional = Optional.of("dog");
+		dogMaybe = Option.ofOptional(javaOptional);
+		assertEquals("DOG", dogMaybe.peek(System.out::println).map(String::toUpperCase).getOrElse(""));
+	}
 }
