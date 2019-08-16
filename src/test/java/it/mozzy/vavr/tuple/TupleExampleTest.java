@@ -1,4 +1,4 @@
-package it.mozzy.vavr.option;
+package it.mozzy.vavr.tuple;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
