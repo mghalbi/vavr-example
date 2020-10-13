@@ -16,7 +16,7 @@
 		<!-- Libs -->
 		<lib.vavr.version>0.10.2</lib.vavr.version>
 		<!-- Tests -->
-		<test.junit.version>4.12</test.junit.version>
+		<test.junit.version>4.13.1</test.junit.version>
 		<test.assertj-core.version>3.13.2</test.assertj-core.version>
 	</properties>
 
